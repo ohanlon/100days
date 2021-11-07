@@ -9,7 +9,7 @@ abstract class LengthValidationBase implements Validate {
   }
 
   public Debug() {
-      console.log(`Checking whether the length check of ${this.length} for ${this.text} is valid returns ${this.CheckForValidity()}`);
+    console.log(`Checking whether the length check of ${this.length} for ${this.text} is valid returns ${this.CheckForValidity()}`);
   }
 
   protected abstract CheckForValidity(): boolean;
@@ -23,7 +23,7 @@ class MaximumLengthValidation extends LengthValidationBase {
 
 class MinimumLengthValidation extends LengthValidationBase {
   protected CheckForValidity(): boolean {
-    return this.text.length <= this.length;
+    return this.text.length >= this.length;
   }
 }
 
