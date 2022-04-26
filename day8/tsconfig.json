@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "DOM", "ES2015"
+    ], 
+    "outDir": "./scripts",
+    "strict": true,
+    "noUnusedLocals": true,
+  }
+}
