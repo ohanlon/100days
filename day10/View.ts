@@ -15,9 +15,8 @@ export class View {
     private addTableRow(tableBody: HTMLTableSectionElement, ...elements: string[]): void {
         const tableRow = tableBody.insertRow(tableBody.rows.length);
         elements.forEach(element => {
-            const columnElement = tableRow.insertCell(0);
+            const columnElement = tableRow.insertCell(tableRow.cells.length);
             columnElement.textContent = element;
-            tableRow.appendChild(columnElement)
         });
     }
 }
