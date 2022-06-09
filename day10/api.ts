@@ -6,7 +6,7 @@ const intraday = new Intraday();
 
 async function RefreshView(symbol: string): Promise<void> {
     const shareDetails = await intraday.Get(symbol) as Trading;
-    await view.Build(shareDetails);
+    view.Build(shareDetails);
 }
 
 RefreshView('MSFT').then(x => {
